@@ -2,62 +2,71 @@
 <html lang="da">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bæredygtig Stil</title>
     <style>
-        body {
-            background-color: #ffccdd; /* Light pink background */
+        body { 
+            background-color: #B0E0E6;
             font-family: Arial, sans-serif;
-            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             margin: 0;
-            padding: 0;
         }
 
         .container {
-            background-color: #ff99bb; /* Darker pink box */
+            background-color: white;
+            padding: 40px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            text-align: center;
             width: 80%;
             max-width: 600px;
-            margin: 50px auto;
-            padding: 20px;
-            border-radius: 10px;
         }
 
-        h1 {
-            color: #fff; /* White text for the title */
+        .title {
+            font-size: 2.5em;
+            margin-bottom: 20px;
         }
 
-        ul {
+        .links {
             list-style-type: none;
             padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            font-size: 1.5em;
+            color: #333;
         }
 
-        li {
+        .links li {
             margin: 15px 0;
         }
 
-        a {
+        .links a {
             text-decoration: none;
-            color: #fff; /* White text for links */
-            background-color: #ff6699; /* A bit darker for links */
-            padding: 10px;
-            border-radius: 5px;
+            color: #333;
+            transition: color 0.3s ease;
         }
 
-        a:hover {
-            background-color: #ff3385; /* Darker pink on hover */
+        .links a:hover {
+            color: #007BFF; 
         }
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap'); 
     </style>
 </head>
 <body>
-    <h1>Bæredygtig Stil</h1>
     <div class="container">
-        
-        <ul>
-            <li><a href="om_mig.html">Om mig - Personlig blog</a></li>
-            <li><a href="projekter.html">Personlige projekter</a></li>
-            <li><a href="ressourcer.html">Ressourcer</a></li>
-            
+        <h1 class="title">Bæredygtig Stil</h1>
+        <ul class="links">
+            <li><a href="personlig-blog.html">Personlig Blog</a></li>
+            <li><a href="personlige-projekter.html">Personlige Projekter</a></li>
+            <li><a href="guide.html">Ressourcer</a></li>
+            <li><a href="3-side.html">kontakt</a></li>
         </ul>
     </div>
 </body>
 </html>
+
