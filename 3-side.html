@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Bæredygtig Stil</title>
+    <style>
+       
+        body {
+            background-color: #B0E0E6; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            width: 90%;
+        }
+
+        h1, h2 {
+            text-align: center;
+            font-family: sans-serif; 
+        }
+
+        .contact-info {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .contact-info p {
+            margin: 5px 0;
+            font-size: 1.2em;
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"], input[type="email"], textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+
+        .success-message {
+            display: none;
+            color: green;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap'); 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Community</h1>
+        <h2>Kontakt mig</h2>
+        
+        <div class="contact-info">
+            <p>Email: <a href="mailto:gul.ilayda.demir@gmail.com">gul.ilayda.demir@gmail.com</a></p>
+            <p>Telefon: <a href="tel:+4560893898">60893898</a></p>
+        </div>
+
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="name">Navn:</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Besked:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+            </div>
+            <input type="submit" value="Send Besked">
+        </form>
+
+        <p class="success-message" id="successMessage">Tak for din besked! Jeg vender tilbage så snart som muligt.</p>
+
+        <p style="text-align: center; margin-top: 20px;">
+            <a href="index_2.html" style="text-decoration: none; color: #007BFF;">← Tilbage til forsiden</a>
+        </p>
+    </div>
+
+    <script>
+        
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+           
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (name && email && message) {
+                
+                document.getElementById('successMessage').style.display = 'block';
+                
+                document.getElementById('contactForm').reset();
+            } else {
+                alert('Udfyld venligst alle felter korrekt.');
+            }
+        });
+    </script>
+</body>
+</html>
+
